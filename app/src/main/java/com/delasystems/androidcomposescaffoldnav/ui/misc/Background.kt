@@ -17,25 +17,29 @@ FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
 OR OTHER DEALINGS IN THE SOFTWARE.
 */
-package com.delasystems.androidcomposescaffoldnav.ui.theme
+package com.delasystems.androidcomposescaffoldnav.ui.misc
 
-import androidx.compose.material.Typography
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.MaterialTheme
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.BlendMode
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import com.delasystems.androidcomposescaffoldnav.R
+import com.delasystems.androidcomposescaffoldnav.ui.theme.backgroundTint
 
-val Typography = Typography(
-    body1 = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
+@Composable
+fun Background() {
+    Image( modifier = Modifier.fillMaxSize(),
+        painter = painterResource(id = R.drawable.sandpaper),
+        contentScale = ContentScale.FillBounds,
+        contentDescription = "background_image",
+        colorFilter = ColorFilter.tint(
+            MaterialTheme.colors.backgroundTint,
+            BlendMode.Xor
+        )
     )
-)
-
-val fonts = FontFamily(
-    Font(R.font.rosario_light, weight = FontWeight.Light),
-    Font(R.font.rosario_regular, FontWeight.Normal)
-)
+}

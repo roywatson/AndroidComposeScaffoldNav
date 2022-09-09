@@ -17,25 +17,29 @@ FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
 OR OTHER DEALINGS IN THE SOFTWARE.
 */
-package com.delasystems.androidcomposescaffoldnav.ui.theme
+package com.delasystems.androidcomposescaffoldnav.ui.screens
 
-import androidx.compose.material.Typography
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.sp
-import com.delasystems.androidcomposescaffoldnav.R
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.navigation.NavController
+import com.delasystems.androidcomposescaffoldnav.ui.misc.Attribution
+import com.delasystems.androidcomposescaffoldnav.ui.misc.Background
 
-val Typography = Typography(
-    body1 = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
-    )
-)
-
-val fonts = FontFamily(
-    Font(R.font.rosario_light, weight = FontWeight.Light),
-    Font(R.font.rosario_regular, FontWeight.Normal)
-)
+@Composable
+fun SearchScreen3(navController: NavController) {
+    Background()
+    Column( modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Attribution()
+        Text(text = "SearchScreen 3",
+            style = MaterialTheme.typography.h4,
+            modifier = Modifier.clickable { })
+    }
+}
