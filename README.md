@@ -45,7 +45,7 @@ The first step was to create the target pages which all reside in the *com.delas
 
 Next we create a sealed class in the *com.delasystems.androidcomposescaffoldnav.navigation* package. Those are basically the constant names that we will assign to the destinations in our navigation graph. You can easily see that the names corresond to the screen names we created above.
 
-![Screenshot_1662337768](/Users/roywatson/Desktop/Screenshot_1662337768.png)
+![Screenshot_1663035855](/Users/roywatson/devel/___my_sample_code/AndroidComposeScaffoldNav/Screenshot_1663035855.png)
 
 ​																							Figure 1.
 
